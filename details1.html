@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .profile-container { 
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 30px;
+        /* background-color: red; */
+        position: relative;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        color: var(--primary-color);
+        font-size: 1rem;
+      }
+
+      .basic-details {
+        width: 30%;
+        height: 100%;
+        border: 1px solid #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* row-gap: 20px; */
+        background-color: #f3f3f3;
+      }
+
+      .basic-details h3,
+      h4 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+      }
+
+      .profile-info {
+        padding: 10px 20px 10px 20px;
+        background-color: var(--accent-color);
+      }
+
+      .profile-info p {
+        text-align: center;
+      }
+      .image-disclaimer {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .desc {
+        text-align: justify;
+        text-justify: auto;
+        /* margin-top: 50px; */
+        border-top: 1px solid var(--primary-color);
+        /* padding-top: 50px; */
+      }
+
+      .desc li {
+        margin-bottom: 20px;
+        list-style-type: none;
+      }
+
+      .desc strong {
+        color: var(--secondary-color);
+        border-bottom: none;
+      }
+
+      .complete-details {
+        width: 70%;
+        height: 70vh;
+        
+      }
+
+      .profile-pic {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        /* border-radius: 50%; */
+        background-color: var(--accent-color);
+        /* transform: translateY(30px); */
+      }
+
+      .profile-pic img {
+        width: 180px;
+        height: 180px;
+        /* border-radius: 50%; */
+      }
+
+      /* profile tabs */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 13px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      #Profile {
+        display: block;
+      }
+
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        color: var(--primary-color);
+        padding: 10px 20px;
+        height: 89%;
+        background-color: var(--accent-color);
+        overflow-y: scroll;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .profile-container {
+          width: 100%;
+          margin-top: 100px;
+          margin-bottom: 50px;
+          flex-direction: column;
+          row-gap: 20px;
+        }
+
+        .basic-details {
+          width: 100%;
+        }
+
+        .basic-details h3,
+        .basic-details h4 {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .profile-info {
+          padding: 0px 20px 10px 20px;
+          background-color: var(--accent-color);
+        }
+
+        .profile-info p {
+          text-align: center;
+        }
+
+        .desc {
+          text-align: justify;
+          text-justify: auto;
+          margin-top: 50px;
+          border-top: 1px solid var(--primary-color);
+          padding-top: 50px;
+        }
+
+        .desc p {
+          margin-bottom: 50px;
+        }
+
+        .complete-details {
+          width: 100%;
+        }
+
+        .profile-pic {
+          width: 200px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: var(--accent-color);
+          transform: translateY(120px);
+        }
+
+        .profile-pic img {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+        }
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .availability {
+        display: flex;
+        align-items: center;
+      }
+      .availability span {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .form-body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           padding: 30px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            width: 70%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .form-container h2 {
+            color: #c00;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .form-container input[type="text"], 
+        .form-container input[type="email"],
+        .form-container input[type="number"],
+        .form-container textarea {
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 15px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #a00;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="profile-container">
+      <aside class="basic-details">
+        <h4>S32G274AABK0VUCT – NXP USA INC</h4>
+        <p class="image-disclaimer">
+          Disclaimer: The image displayed serves as a mere illustration and does
+          not provide precise specifications. For accurate details, We recommend
+          referring to the official product data sheet.
+        </p>
+        <span class="profile-pic">
+          <img
+            src="https://make-tronics.com/wp-content/uploads/2024/02/BP5275-50-1.jpg"
+            alt="profile pic"
+          />
+         
+        </span>
+        <p><span style="color: #df1313 !important;text-decoration: line-through; text-decoration-color: #000;">$24.60</span><span>15%</span></p>
+        <p>$20.91</p>
+        <span class="profile-info">
+          <p><button
+            class="tablinks"
+            onclick="openTab(event, 'Achievements')"
+            type="button"
+          >
+            Send Quote
+          </button></p>
+        </span>
+      </aside>
+
+      <section class="complete-details">
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'Project')"
+            type="button"
+          >
+            Product Details
+          </button>
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'Achievements')"
+            type="button"
+          >
+            Send Quote
+          </button>
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'Profile')"
+            type="button"
+          >
+            Product Attributes
+          </button>
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'Video')"
+            type="button"
+          >
+            Product Information
+          </button>
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'Images')"
+            type="button"
+          >
+            Additional Information
+          </button>
+          <button
+            class="tablinks"
+            onclick="openTab(event, 'Business')"
+            type="button"
+          >
+            Related Products
+          </button>
+        </div>
+
+        <div id="Profile" class="tabcontent">
+          <h3>Product Attributes</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Type</th>
+                <td>DescriptionSelect All</td>
+              </tr>
+              <tr>
+                <th>Category</th>
+                <td>Power Supplies - Board MountDC DC Converters</td>
+              </tr>
+              <tr>
+                <th>Mfr</th>
+                <td>Rohm Semiconductor</td>
+              </tr>
+              <tr>
+                <th>Series</th>
+                <td>BP5275</td>
+              </tr>
+              <tr>
+                <th>Package</th>
+                <td>Bulk</td>
+              </tr>
+              <tr>
+                <th>Product Status</th>
+                <td>Obsolete</td>
+              </tr>
+              <tr>
+                <th>Type</th>
+                <td>Non-Isolated PoL Module</td>
+              </tr>
+              <tr>
+                <th>Number of Outputs</th>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th>Voltage - Input (Min)</th>
+                <td>6V</td>
+              </tr>
+              <tr>
+                <th>Voltage - Input (Max)</th>
+                <td>14V</td>
+              </tr>
+              <tr>
+                <th>Voltage - Output 1</th>
+                <td>5V</td>
+              </tr>
+              <tr>
+                <th>Voltage - Output 2</th>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th>Voltage - Output 3</th>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th>Current - Output (Max)</th>
+                <td>500mA</td>
+              </tr>
+              <tr>
+                <th>Power (Watts)</th>
+                <td>3 W</td>
+              </tr>
+              <tr>
+                <th>Applications</th>
+                <td>ITE (Commercial)</td>
+              </tr>
+              <tr>
+                <th>Features</th>
+                <td>SCP</td>
+              </tr>
+              <tr>
+                <th>Operating Temperature</th>
+                <td>-30°C ~ 85°C</td>
+              </tr>
+              <tr>
+                <th>Efficiency</th>
+                <td>88%</td>
+              </tr>
+              <tr>
+                <th>Mounting Type</th>
+                <td>Through Hole</td>
+              </tr>
+              <tr>
+                <th>Package / Case</th>
+                <td>TO-220-3</td>
+              </tr>
+              <tr>
+                <th>Size / Dimension</th>
+                <td>0.54" L x 0.20" W x 0.91" H (13.8mm x 5.2mm x 23.0mm)</td>
+              </tr>
+              <tr>
+                <th>Supplier Device Package</th>
+                <td>TO-220-3</td>
+              </tr>
+              <tr>
+                <th>Base Product Number</th>
+                <td>BP5275</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="Video" class="tabcontent">
+          <div>
+            <h2>Semiconductor Product Description: BP5275-50</h2>
+            <p>
+            The BP5275-50 is a cutting-edge semiconductor device that offers unparalleled performance and reliability for a wide range of applications. Whether you are a seasoned engineer or a tech enthusiast, this product is sure to impress with its advanced features and benefits.
+            </p>
+            <h3>Key Features:</h3>
+            <ul>
+            <li>High-speed processing capabilities</li>
+            <li>Low power consumption</li>
+            <li>Wide operating temperature range</li>
+            <li>Compact and lightweight design</li>
+            <li>Robust construction for durability</li>
+            </ul>
+            <h3>Key Benefits:</h3>
+            <ul>
+            <li>Enhanced performance for demanding applications</li>
+            <li>Extended battery life for portable devices</li>
+            <li>Reliable operation in extreme conditions</li>
+            <li>Easy integration into existing systems</li>
+            <li>Cost-effective solution for semiconductor needs</li>
+            </ul>
+            <h3>Applications:</h3>
+            <p>
+            The BP5275-50 is ideal for a variety of applications, including but not limited to:
+            </p><ul>
+            <li>Consumer electronics</li>
+            <li>Automotive systems</li>
+            <li>Industrial automation</li>
+            <li>Telecommunications</li>
+            <li>Medical devices</li>
+            </ul>
+            <p></p>
+            <h3>Performance Advantages:</h3>
+            <p>
+            With its high-speed processing capabilities and low power consumption, the BP5275-50 outperforms competitors in terms of efficiency and reliability. Its wide operating temperature range and compact design make it suitable for a wide range of environments and applications.
+            </p>
+            <h3>Standout in the Market:</h3>
+            <p>
+            The BP5275-50 stands out in the market due to its superior performance, reliability, and cost-effectiveness. Its advanced features and benefits make it a top choice for engineers and enthusiasts looking for a high-quality semiconductor solution.
+            </p>
+            </div>
+        </div>
+
+        <div id="Images" class="tabcontent">
+          <h3>Addtional Information</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Attribute</th>
+                <td>Description</td>
+              </tr>
+              <tr>
+                <th>RoHS Status</th>
+                <td>ROHS3 Compliant</td>
+              </tr>
+              <tr>
+                <th>Moisture Sensitivity Level (MSL)</th>
+                <td>1 (Unlimited)</td>
+              </tr>
+              <tr>
+                <th>REACH Status</th>
+                <td>REACH Unaffected</td>
+              </tr>
+              <tr>
+                <th>ECCN</th>
+                <td>EAR99</td>
+              </tr>
+              <tr>
+                <th>HTSUS</th>
+                <td>8542.39.0001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="Project" class="tabcontent">
+          <h3>Product Details</h3>
+          <table>
+            <tr>
+              <th>Availability</th>
+              <td>
+                <div class="availability">
+                  <span>In Stock</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>Manufacturer</th>
+              <td>Rohm Semiconductor</td>
+            </tr>
+            <tr>
+              <th>Manufacturer Part No.</th>
+              <td>BP5275-50 – Rohm Semiconductor</td>
+            </tr>
+            <tr>
+              <th>Description</th>
+              <td>DC DC CONVERTER 5V 3W</td>
+            </tr>
+            <tr>
+              <th>Detailed Description</th>
+              <td>
+                Non-Isolated PoL Module DC DC Converter 1 Output 5V 500mA 6V -
+                14V Input
+              </td>
+            </tr>
+            <tr>
+              <th>Datasheet</th>
+              <td><a href="#">Datasheet Link</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="Achievements" class="tabcontent">
+            <div class="form-body">
+            <div class="form-container">
+                <h2>REQUEST QUOTE</h2>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Company name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="BP5275-50 -">
+                    <input type="text" placeholder="Quantity">
+                    <input type="text" placeholder="Target price">
+                    <input type="text" placeholder="FIRST15">
+                    <input type="submit" value="Send Now">
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <div id="Business" class="tabcontent">
+          <h3>Related Products</h3>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // profile tabs
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Open default tab
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".tab button:first-child").click();
+      });
+    </script>
+  </body>
+</html>
