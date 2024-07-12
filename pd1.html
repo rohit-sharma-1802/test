@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://make-tronics.com/wp-content/themes/maketronics/assets/favicon/favicon.jpg" />
+    <link rel="stylesheet" href="https://make-tronics.com/wp-content/themes/maketronics/assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="index.css">
+    <title>Pd1</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div
+            style="width: 100%; background-color: #004aad; color: #fff; text-align: center; padding: 8px 0; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform: uppercase;">
+            Exclusive promotion | 15% off for new customers | CODE: FIRST15
+        </div>
+        <div class="desktop__header">
+            <span class="brand__logo">
+                <a href="/"><img
+                        src="https://make-tronics.com/wp-content/themes/maketronics/assets/images/images/logo.webp"
+                        alt="MakeTronics Logo" /></a>
+            </span>
+            <span class="search__box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <form class="search-form" method="get" action="#">
+                    <input type="search" placeholder="Search by keyword / part #"  name="s" />
+                    <button type="submit">SEARCH</button>
+                </form>
+            </span>
+            <span class="request__quote__box">
+                <a href="/request-your-quote" class="reset__a">REQUEST QUOTE</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="mobile__header" id="mobile__header">
+        <h1
+            style="width: 100%; background-color: #004aad; color: #fff; text-align: center; padding: 8px 0; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform: uppercase;">
+            Exclusive promotion | 15% off for new customers
+        </h1>
+        <div class="mobile__header__without__offer" style="display: block;">
+            <div style="display: flex;">
+                <span class="brand__logo">
+                    <a href="/"><img src="https://make-tronics.com/assets/images/images/logo.webp"
+                            alt="MakeTronics Logo" /></a>
+                </span>
+                <span id="open">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </div>
+            <div>
+                <span class="search__box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <form class="search-form" method="get" action="#">
+                        <input type="search" placeholder="Search by keyword / part #" value="#" name="s" />
+                        <button type="submit">SEARCH</button>
+                    </form>
+                </span>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/" class="reset__a">HOME</a></li>
+            <li><a href="/products-category" class="reset__a">PRODUCTS</a></li>
+            <li><a href="/blog" class="reset__a">BLOG</a></li>
+            <li><a href="/case-study" class="reset__a">CASE STUDIES</a></li>
+            <li><a href="/about" class="reset__a">ABOUT US</a></li>
+            <li><a href="/contact" class="reset__a">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="mobile__nav" id="mobile-nav">
+        <span id="close"><i class="fa-solid fa-xmark"></i></span>
+        <ul>
+            <li><a href="/" class="reset__a">HOME</a></li>
+            <li><a href="/products-category" class="reset__a">PRODUCTS</a></li>
+            <li><a href="/blog" class="reset__a">BLOG</a></li>
+            <li><a href="/case-study" class="reset__a">CASE STUDIES</a></li>
+            <li><a href="/about" class="reset__a">ABOUT US</a></li>
+            <li><a href="/contact" class="reset__a">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Page -->
+
+    <style>
+        .request_to_quote {
+            display: none;
+        }
+
+        .box__heading {
+            color: #e60808;
+        }
+
+        .quote__box__form button {
+            background-color: #e60808;
+
+        }
+
+        .column__1 {
+            flex: 3;
+        }
+
+        .product__details .column__2 {
+            display: flex;
+            gap: 0px;
+            padding: 0;
+            flex: 2;
+        }
+
+        .all__details__container {
+            padding-block: 26px;
+        }
+
+        .advantage__box {
+            width: 100%;
+            box-shadow: none;
+            border: 1px solid #eee;
+
+            padding-bottom: 1px;
+        }
+
+        .advantages {
+            display: flex;
+            justify-content: center;
+            gap: 0%;
+            /* flex-wrap: wrap; */
+            padding-inline: 20px;
+            gap: 26px;
+        }
+
+        .key-stats-box {
+            display: none;
+        }
+
+        .advantage {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .advantage img {
+            width: 60px;
+        }
+
+        .advantage p {
+            text-align: left;
+        }
+
+        .latest__heading {
+            color: var(--secondary-color);
+            text-align: center;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+
+        .additional__info ul {
+            box-sizing: border-box;
+            list-style: circle var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .additional__info h2,
+        .additional__info h1 {
+            font-size: 12px;
+            padding-top: 10px;
+        }
+
+        .additional__info h3 {
+            font-size: 12px;
+            padding-top: 10px;
+        }
+
+        .additional__info ul li {
+            font-size: 0.7rem;
+            line-height: 1.8em;
+
+        }
+
+        .mytabs {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 100px;
+        }
+
+        .mytabs input[type="radio"] {
+            display: none;
+        }
+
+        .mytabs label {
+            padding: 10px;
+            background: #e2e2e2;
+            font-weight: bold;
+            padding-inline: 37px;
+        }
+
+        .mytabs label:hover {
+            cursor: pointer;
+        }
+
+        .mytabs .tab {
+            width: 100%;
+            order: 1;
+            display: none;
+
+        }
+
+        .mytabs>input[type="radio"]:checked+label {
+            background: #004aad;
+            color: white;
+        }
+
+        .mytabs input[type='radio']:checked+label+.tab {
+            display: block;
+        }
+
+
+
+        .product__details__box {
+            padding: 0px;
+        }
+
+        .main_title_header {
+            display: flex;
+            /* width: 100%; */
+            background: #edebeb;
+            justify-content: space-between;
+        }
+
+        .mySlidesp {
+            display: flex !important;
+            padding-block: 10px;
+        }
+
+        .containerp .mySlidesp img {
+            width: 70% !important;
+            margin: auto;
+            padding-left: 0px;
+            cursor: pointer;
+        }
+
+        .datasheet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            gap: 5px;
+            background: #0d39f7de;
+            ;
+            color: #fff;
+            border: 1px solid #000;
+            border-radius: 7px;
+            width: 46%;
+            margin: auto;
+        }
+
+        .product__details__table .quote__box__form {
+            border-radius: 5px;
+            border: 1px solid #004aad;
+        }
+
+        .original-price{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            padding-block: 10px;
+        }
+
+        .price_box{
+    display: flex;
+    gap: 13px;
+    background: #ffcd4e;
+    padding: 3px 12px;
+    color: #000 !important;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.unit-price .original-price .price_box span{
+    color: #000 !important;
+}
+
+.discount_percentage{
+    color: #fff !important;
+    padding: 2px 8px;
+    background: red;
+    border-radius: 5px;
+}
+.unit-price .original-price  span{
+    color: #fff !important;
+}
+
+.box__heading .main_product_title_availability{
+    color: #fff !important;
+}
+
+.availability_title{
+    color: #000;
+    padding-inline: 15px;
+    font-size: 11px;
+}
+.availability_status{
+    color: #fff;
+    background: #00bc31dd;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+    margin-block: 4px;
+}
+
+        @media screen and (max-width: 900px) {
+
+            .all__details__container,
+            .main_breadcrumb {
+                padding-block: 0px;
+            }
+
+            .advantage__box {
+                display: none;
+            }
+
+            .advantage__box .key-stats-box {
+                display: block;
+            }
+
+            .advantage__box .key-stats-box {
+                display: block;
+            }
+
+            .key-stats-box {
+                display: block;
+            }
+
+            .request_to_quote {
+                display: block;
+                background: #009d16;
+            }
+
+            .containerp .mySlidesp img {
+                width: 100% !important;
+                margin: auto;
+                padding-left: 0px;
+                cursor: pointer;
+            }
+
+            #myModal img {
+                width: 65% !important;
+            }
+        }
+    </style>
+    <div class="advantage__box">
+        <div class="advantages">
+            <span class="advantage">
+                <img src="https://kristr.com/wp-content/uploads/2024/02/adv1.jpeg" alt="maketronics-services">
+                <p>100% new and original products</p>
+            </span>
+            <span class="advantage">
+                <img src="https://kristr.com/wp-content/uploads/2024/02/adv2.jpeg" alt="maketronics-services">
+                <p>Hassle-free returns</p>
+            </span>
+            <span class="advantage">
+                <img src="https://kristr.com/wp-content/uploads/2024/02/adv3.jpeg" alt="maketronics-services">
+                <p>Fast & responsive customer support</p>
+            </span>
+            <span class="advantage">
+                <img src="https://kristr.com/wp-content/uploads/2024/02/adv4.jpeg" alt="maketronics-services">
+                <p>Guaranteed worldwide delivery in 3 weeks**</p>
+            </span>
+            <span class="advantage">
+                <img src="https://kristr.com/wp-content/uploads/2024/02/adv5.jpeg" alt="maketronics-services">
+                <p>Quality assurance</p>
+            </span>
+        </div>
+    </div>
+
+    <div class="all__details__container">
+        <div class="column__1">
+
+
+            <div class="product__details__box">
+                <div class="main_title_header">
+                    <div class="box__heading main_product_title">
+                        <p id="partNo">1824 &#8211; Adafruit Industries LLC</p>
+                    </div>
+                    <div class="box__heading main_product_title_availability">
+                        <span class="availability_title">Availability: </span><span class="availability_status">In Stock</span>
+                    </div>
+                </div>
+
+                <div class="product__details">
+                    <div class="column__2">
+
+                        <div>
+                            <p style="font-size: 8px; font-weight: normal; text-align:left;">
+                                <strong>Disclaimer:</strong> The image displayed serves as a mere illustration and does
+                                not provide precise specifications. For accurate details, We recommend referring to the
+                                official product data sheet.
+                            </p>
+                        </div>
+                        <div class="containerp">
+                            <div class="mySlidesp"><img id="myImg"
+                                    src="https://make-tronics.com/wp-content/uploads/2021/12/1824_spl.webp" alt="1824
+                                    &#8211; Adafruit Industries LLC"></div>
+                            <div class="rowp">
+                            </div>
+
+                        </div>
+
+                        <div class="product__price">
+                            <div class="unit-price">
+                                <span class="main_page_price">
+                                    <span class="original-price">
+                                       <sapn class="price_box">
+                                        <span class="woocommerce-Price-amount amount" style="text-decoration: line-through; text-decoration-color: #000;">
+                                            <span class="woocommerce-Price-currencySymbol">&#36;
+                                            </span>
+                                            8.50
+                                        </span>
+                                        <span class="woocommerce-Price-amount amount">
+                                            <span class="woocommerce-Price-currencySymbol">&#36;
+                                            </span>
+                                            7.23
+                                        </span>
+                                       </sapn>
+                                        <span class="discount_percentage" style="color: #fff;"> - 15%</span>
+                                    </span>        
+                                </span>
+                            </div>
+                            <a class="price_on_request request_to_quote" href="#request-your-quote">Request Quote</a>
+                        </div>
+
+                        <div class="product__price">
+                            <a class="datasheet" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2216/1824_Web.pdf">
+                                <i class="fa fa-file-pdf-o"></i>
+                                <span>Datasheet</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column__1">
+                        <div class="product__details__table">
+
+                            <div class="quote_box ">
+
+                                <div class="box__heading" id="request-your-quote">
+                                    <!-- <p>Request Quote</p> -->
+                                </div>
+                                <div class="quote__box__form">
+                                    <div id="quoteForm" action="" method="post">
+
+                                        <div class="wpcf7 no-js" id="wpcf7-f11710-o1" lang="en-US" dir="ltr">
+                                            <div class="screen-reader-response">
+                                                <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                                <ul></ul>
+                                            </div>
+                                            <form action="/product/23992021/1824/#wpcf7-f11710-o1" method="post"
+                                                class="wpcf7-form init" aria-label="Contact form"
+                                                novalidate="novalidate" data-status="init">
+                                                <div style="display: none;">
+                                                    <input type="hidden" name="_wpcf7" value="11710" />
+                                                    <input type="hidden" name="_wpcf7_version" value="5.9.6" />
+                                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                    <input type="hidden" name="_wpcf7_unit_tag"
+                                                        value="wpcf7-f11710-o1" />
+                                                    <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                                    <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+                                                </div>
+                                                <div class="company_email_col">
+                                                    <div class="block-e">
+                                                        <p><label for="your-name">Name</label><span
+                                                                class="wpcf7-form-control-wrap"
+                                                                data-name="your-name"><input size="40" maxlength="80"
+                                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                    aria-required="true" aria-invalid="false"
+                                                                    placeholder="Name" value="" type="text"
+                                                                    name="your-name" /></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="block-e">
+                                                        <p><label for="company">Company</label><span
+                                                                class="wpcf7-form-control-wrap"
+                                                                data-name="company"><input size="40" maxlength="80"
+                                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                    aria-required="true" aria-invalid="false"
+                                                                    placeholder="Company name" value="" type="text"
+                                                                    name="company" /></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="block-e">
+                                                    <p><label for="email">Email</label><span
+                                                            class="wpcf7-form-control-wrap" data-name="email"><input
+                                                                size="40" maxlength="80"
+                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                                                aria-required="true" aria-invalid="false"
+                                                                placeholder="Email" value="" type="email"
+                                                                name="email" /></span>
+                                                    </p>
+                                                </div>
+                                                <div class="inlineInput">
+                                                    <div class="block-e">
+                                                        <p><label for="part_number">Part #</label><span
+                                                                class="wpcf7-form-control-wrap"
+                                                                data-name="part_number"><input size="40" maxlength="80"
+                                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required partNumberHidden"
+                                                                    id="partNumber" aria-required="true"
+                                                                    aria-invalid="false" value="" type="text"
+                                                                    name="part_number" /></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="block-e">
+                                                        <p><label for="quantity">Qty</label><span
+                                                                class="wpcf7-form-control-wrap"
+                                                                data-name="quantity"><input
+                                                                    class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number"
+                                                                    min="0" aria-required="true" aria-invalid="false"
+                                                                    placeholder="0" value="" type="number"
+                                                                    name="quantity" /></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="block-e">
+                                                        <p><label for="target_price">Target</label><span
+                                                                class="wpcf7-form-control-wrap"
+                                                                data-name="target_price"><input
+                                                                    class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
+                                                                    min="0" aria-invalid="false" placeholder="0"
+                                                                    value="" type="number" name="target_price" /></span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="block-e">
+                                                    <p><label for="couponcode">Coupon</label><br />
+                                                        <span class="wpcf7-form-control-wrap"
+                                                            data-name="couponcode"><input size="40" maxlength="80"
+                                                                class="wpcf7-form-control wpcf7-text couponcode"
+                                                                aria-invalid="false" value="FIRST15" type="text"
+                                                                name="couponcode" /></span>
+                                                    </p>
+                                                </div>
+                                                <p><button type="submit" name="submit">Send Now</button>
+                                                </p>
+                                                <p style="display: none !important;" class="akismet-fields-container"
+                                                    data-prefix="_wpcf7_ak_"><label>&#916;<textarea
+                                                            name="_wpcf7_ak_hp_textarea" cols="45" rows="8"
+                                                            maxlength="100"></textarea></label><input type="hidden"
+                                                        id="ak_js_1" name="_wpcf7_ak_js" value="177" />
+                                                    <script>document.getElementById("ak_js_1").setAttribute("value", (new Date()).getTime());</script>
+                                                </p>
+                                                <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage_box">
+                <div class="key-stats-box">
+                    <div class="advantages">
+                        <span class="advantage">
+                            <img src="https://kristr.com/wp-content/uploads/2024/02/adv1.jpeg"
+                                alt="maketronics-services">
+                            <p>100% new and original products</p>
+                        </span>
+                        <span class="advantage">
+                            <img src="https://kristr.com/wp-content/uploads/2024/02/adv2.jpeg"
+                                alt="maketronics-services">
+                            <p>Hassle-free returns</p>
+                        </span>
+                        <span class="advantage">
+                            <img src="https://kristr.com/wp-content/uploads/2024/02/adv3.jpeg"
+                                alt="maketronics-services">
+                            <p>Fast & responsive customer support</p>
+                        </span>
+                        <span class="advantage">
+                            <img src="https://kristr.com/wp-content/uploads/2024/02/adv4.jpeg"
+                                alt="maketronics-services">
+                            <p>Guaranteed worldwide delivery in 3 weeks**</p>
+                        </span>
+                        <span class="advantage">
+                            <img src="https://kristr.com/wp-content/uploads/2024/02/adv5.jpeg"
+                                alt="maketronics-services">
+                            <p>Quality assurance</p>
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="mytabs">
+                <input type="radio" id="productAttributes" name="mytabs" checked="checked">
+                <label for="productAttributes">Product Attributes</label>
+                <div class="tab">
+                    <div class="additional__info__box">
+                        <div class="box__heading">
+                            <p>Product Attributes</p>
+                        </div>
+                        <div class="product__attributes">
+                            <div class="product__details__table">
+                                <table width="519">
+                                    <tbody>
+                                        <tr>
+                                            <td width="231"><strong>Product Attribute</strong></td>
+                                            <td width="289"><strong>Attribute Value</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Manufacturer:</strong></td>
+                                            <td width="289">Adafruit</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Product Category:</strong></td>
+                                            <td width="289">Input Devices</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Product:</strong></td>
+                                            <td width="289">Electromechanicals</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Brand:</strong></td>
+                                            <td width="289">Adafruit</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Product Type:</strong></td>
+                                            <td width="289">Input Devices</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Factory Pack Quantity:</strong></td>
+                                            <td width="289">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Subcategory:</strong></td>
+                                            <td width="289">Input Devices</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="231"><strong>Unit Weight:</strong></td>
+                                            <td width="289">0.811301 oz</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="product_info_btn">
+                            <button class="error_product_report_btn">
+                                <a href="/product-rectification-query/">Report Product Information Error </a>
+                            </button>
+                            <!-- 			   <button class="view_similar_product_btn">
+                               <a href="">View Similar Products</a>
+                          </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <input type="radio" id="productInformation" name="mytabs">
+                <label for="productInformation">Product Information</label>
+                <div class="tab">
+                    <div class="additional__info__box">
+                        <div class="box__heading">
+                            <p>Product Information</p>
+                        </div>
+                        <div class="additional__info">
+                            <p>
+                            <div>
+                                <h1>Semiconductor Product Description</h1>
+                                <p>
+                                    Our semiconductor product, model number 1824, is a cutting-edge component that
+                                    offers
+                                    unparalleled performance and reliability for a wide range of applications. Whether
+                                    you
+                                    are a
+                                    seasoned engineer or a casual user, this product is designed to meet your needs with
+                                    its
+                                    advanced features and benefits.
+                                </p>
+                                <h2>Key Features:</h2>
+                                <ul>
+                                    <li>High-speed processing capabilities</li>
+                                    <li>Low power consumption</li>
+                                    <li>Wide operating temperature range</li>
+                                    <li>Compact size for easy integration</li>
+                                    <li>Robust design for long-term durability</li>
+                                </ul>
+                                <h2>Key Benefits:</h2>
+                                <ul>
+                                    <li>Improved efficiency and performance in electronic devices</li>
+                                    <li>Extended battery life for portable devices</li>
+                                    <li>Reliable operation in harsh environments</li>
+                                    <li>Cost-effective solution for semiconductor needs</li>
+                                </ul>
+                                <h2>Applications:</h2>
+                                <p>
+                                    The 1824 semiconductor product is ideal for a variety of applications, including but
+                                    not
+                                    limited to:
+                                <ul>
+                                    <li>Consumer electronics</li>
+                                    <li>Automotive systems</li>
+                                    <li>Industrial automation</li>
+                                    <li>Telecommunications</li>
+                                </ul>
+                                </p>
+                                <h2>Performance Advantages:</h2>
+                                <p>
+                                    Compared to other semiconductor products on the market, the 1824 stands out with its
+                                    superior performance in terms of speed, efficiency, and reliability. Its innovative
+                                    design
+                                    and advanced technology make it a top choice for professionals and enthusiasts
+                                    alike.
+                                </p>
+                                <p>
+                                    In conclusion, our semiconductor product 1824 is a game-changer in the industry,
+                                    offering
+                                    unmatched features, benefits, and performance advantages. Whether you are looking
+                                    for a
+                                    high-quality component for your project or simply want to upgrade your electronic
+                                    devices,
+                                    this product is sure to exceed your expectations.
+                                </p>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="radio" id="additionalInformation" name="mytabs">
+                <label for="additionalInformation">Additional Information</label>
+                <div class="tab">
+                    <div class="additional__info__box">
+                        <div class="box__heading">
+                            <p>Additional Info</p>
+                        </div>
+                        <div class="additional__info">
+                            <table>
+                                <tr>
+                                    <td>Attribute</td>
+                                    <td>Description</td>
+                                </tr>
+                                <tr>
+                                    <td>Moisture Sensitivity Level (MSL)</td>
+                                    <td>Not Applicable</td>
+                                </tr>
+                                <tr>
+                                    <td>ECCN</td>
+                                    <td>EAR99</td>
+                                </tr>
+                                <tr>
+                                    <td>HTSUS</td>
+                                    <td>8537.10.9170</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <input type="radio" id="relatedProducts" name="mytabs">
+                <label for="relatedProducts">Related products</label>
+                <div class="tab">
+                    <div class="additional__info__box">
+                        <div class="box__heading">
+                            <p>Related Products</p>
+                        </div>
+                        <div class="additional__info">
+                            <table>
+                                <tr>
+                                    <td>Part No</td>
+                                    <td>Price</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem, ipsum dolor.</td>
+                                    <td>$ 10.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem, ipsum dolor.</td>
+                                    <td>$ 10.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem, ipsum dolor.</td>
+                                    <td>$ 10.4</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column__2">
+            <div class="price__table">
+                <div class="box__heading">
+                    <p>Product Details</p>
+                </div>
+                <table>
+                    <tr>
+                        <th>Manufacturer</th>
+                        <td>
+                            Adafruit Industries LLC </td>
+                    </tr>
+
+                    <tr>
+                        <th>Manufacturer Part No.</th>
+                        <td>1824 &#8211; Adafruit Industries LLC</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>SWITCH KEYPAD 12KEY NON-ILLUM</td>
+                    </tr>
+                    <tr>
+                        <th>Detailed Description</th>
+                        <td>Keypad Switch 12 Polymer Keys Conductive Rubber Contacts Matrix Output
+                            Non-Illuminated</td>
+                    </tr>
+                </table>
+                <div id="hiddenElement">
+
+                    <div class="quote__box">
+                        <div class="box__heading">
+                            <p>Request Quote</p>
+                        </div>
+                        <div class="quote__box__form quote__box__form_hidden" style="background: #fff;">
+                            <div id="quoteForm" action="" method="post">
+
+                                <div class="wpcf7 no-js" id="wpcf7-f11710-o2" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response">
+                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                        <ul></ul>
+                                    </div>
+                                    <form action="/product/23992021/1824/#wpcf7-f11710-o2" method="post"
+                                        class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
+                                        data-status="init">
+                                        <div style="display: none;">
+                                            <input type="hidden" name="_wpcf7" value="11710" />
+                                            <input type="hidden" name="_wpcf7_version" value="5.9.6" />
+                                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11710-o2" />
+                                            <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                            <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+                                        </div>
+                                        <div class="company_email_col">
+                                            <div class="block-e">
+                                                <p><label for="your-name">Name</label><span
+                                                        class="wpcf7-form-control-wrap" data-name="your-name"><input
+                                                            size="40" maxlength="80"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                            aria-required="true" aria-invalid="false" placeholder="Name"
+                                                            value="" type="text" name="your-name" /></span>
+                                                </p>
+                                            </div>
+                                            <div class="block-e">
+                                                <p><label for="company">Company</label><span
+                                                        class="wpcf7-form-control-wrap" data-name="company"><input
+                                                            size="40" maxlength="80"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                            aria-required="true" aria-invalid="false"
+                                                            placeholder="Company name" value="" type="text"
+                                                            name="company" /></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="block-e">
+                                            <p><label for="email">Email</label><span class="wpcf7-form-control-wrap"
+                                                    data-name="email"><input size="40" maxlength="80"
+                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                                        aria-required="true" aria-invalid="false" placeholder="Email"
+                                                        value="" type="email" name="email" /></span>
+                                            </p>
+                                        </div>
+                                        <div class="inlineInput">
+                                            <div class="block-e">
+                                                <p><label for="part_number">Part #</label><span
+                                                        class="wpcf7-form-control-wrap" data-name="part_number"><input
+                                                            size="40" maxlength="80"
+                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required partNumberHidden"
+                                                            aria-required="true" aria-invalid="false" value=""
+                                                            type="text" name="part_number" /></span>
+                                                </p>
+                                            </div>
+                                            <div class="block-e">
+                                                <p><label for="quantity">Qty</label><span
+                                                        class="wpcf7-form-control-wrap" data-name="quantity"><input
+                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number"
+                                                            min="0" aria-required="true" aria-invalid="false"
+                                                            placeholder="0" value="" type="number"
+                                                            name="quantity" /></span>
+                                                </p>
+                                            </div>
+                                            <div class="block-e">
+                                                <p><label for="target_price">Target</label><span
+                                                        class="wpcf7-form-control-wrap" data-name="target_price"><input
+                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
+                                                            min="0" aria-invalid="false" placeholder="0" value=""
+                                                            type="number" name="target_price" /></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="block-e">
+                                            <p><label for="couponcode">Coupon</label><br />
+                                                <span class="wpcf7-form-control-wrap" data-name="couponcode"><input
+                                                        size="40" maxlength="80"
+                                                        class="wpcf7-form-control wpcf7-text couponcode"
+                                                        aria-invalid="false" value="FIRST15" type="text"
+                                                        name="couponcode" /></span>
+                                            </p>
+                                        </div>
+                                        <p><button type="submit" name="submit">Send Now</button>
+                                        </p>
+                                        <p style="display: none !important;" class="akismet-fields-container"
+                                            data-prefix="_wpcf7_ak_"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea"
+                                                    cols="45" rows="8" maxlength="100"></textarea></label><input
+                                                type="hidden" id="ak_js_2" name="_wpcf7_ak_js" value="166" />
+                                            <script>document.getElementById("ak_js_2").setAttribute("value", (new Date()).getTime());</script>
+                                        </p>
+                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            // Function to check and close missing </td>, </tr>, or </table> tags
+            function checkAndCloseTableTags(htmlContent) {
+                var tempDiv = document.createElement('div');
+                tempDiv.innerHTML = htmlContent;
+
+                // Find all table-related elements
+                var tableElements = tempDiv.querySelectorAll('table, tr, td');
+                var missingClosingTags = [];
+
+                tableElements.forEach(function (element) {
+                    // Check if the element has innerHTML and it contains more table-related tags
+                    if (element.innerHTML.includes('<table') || element.innerHTML.includes('<tr') || element.innerHTML.includes('<td')) {
+                        // Count the number of opening and closing tags
+                        var openingTags = (element.innerHTML.match(/<\/?(table|tr|td)[^>]*>/g) || []).length;
+                        var closingTags = (element.innerHTML.match(/<\/(table|tr|td)>/g) || []).length;
+
+                        // If the count of opening tags is greater than the count of closing tags, add to missingClosingTags
+                        if (openingTags > closingTags) {
+                            missingClosingTags.push(element);
+                        }
+                    }
+                });
+
+                missingClosingTags.forEach(function (element) {
+                    element.innerHTML += '</' + element.tagName.toLowerCase() + '>';
+                });
+
+                return tempDiv.innerHTML;
+            }
+
+            // Wait for the document to fully load
+            document.addEventListener('DOMContentLoaded', function () {
+                // Take the content of the document body
+                var htmlContent = document.body.innerHTML;
+
+                // Check and close missing </td>, </tr>, or </table> tags
+                var modifiedHtml = checkAndCloseTableTags(htmlContent);
+
+                // Replace the content of the document body with the modified HTML
+                document.body.innerHTML = modifiedHtml;
+            });
+        };
+    </script>
+    <script>
+        function updatePartNumber() {
+            var partNumberInput = document.getElementById("partNumber");
+            // Use JavaScript to get the part number from your product page and update the input
+            const part = document.getElementById("partNo").innerHTML;
+            partNumberInput.value = part;
+            console.log(part);
+        }
+
+        // Call the function when the page loads
+        window.onload = updatePartNumber();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            removeSpecialCharacters(document.body);
+        });
+
+        function removeSpecialCharacters(element) {
+            if (element.nodeType === Node.TEXT_NODE) {
+                element.textContent = element.textContent.replace(/�/g, "");
+                element.textContent = element.textContent.replace(/Select All/g, "");
+            } else {
+                element.childNodes.forEach(function (child) {
+                    removeSpecialCharacters(child);
+                });
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            hideColumnsWithThreeCells();
+        });
+
+        function hideColumnsWithThreeCells() {
+            const rows = document.querySelectorAll("tr");
+            rows.forEach((row) => {
+                const cells = row.querySelectorAll("th, td");
+                if (cells.length === 3) {
+                    cells.forEach((cell) => {
+                        cell.style.display = "none";
+                    });
+                }
+            });
+        }
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var hiddenElement = document.getElementById('hiddenElement');
+            var scrollPosition = window.scrollY || window.pageYOffset;
+
+            var scrollPercentage = (scrollPosition / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+            if (scrollPercentage > 64 && scrollPercentage < 95) {
+                hiddenElement.style.display = 'block';
+                //    updatePartNumber1(); // Call the function to update the part number
+                var partNo = document.getElementById('partNo').textContent;
+                var partNoHidden = document.querySelectorAll('.partNumberHidden');
+                partNoHidden[1].setAttribute("value", partNo);
+                partNoHidden[0].setAttribute("value", partNo);
+            }
+            else {
+                hiddenElement.style.display = 'none';
+            }
+
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                infinite: true,
+                // Add any additional options you need
+            });
+        });
+    </script>
+
+    <script>
+        let slideIndexp = 1;
+        showSlidesp(slideIndexp);
+
+        // Next/previous controls
+        function plusSlidesp(n) {
+            showSlidesp(slideIndexp += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlidep(n) {
+            showSlidesp(slideIndexp = n);
+        }
+
+        function showSlidesp(n) {
+            let i;
+            let slidesp = document.getElementsByClassName("mySlidesp");
+            let dotsp = document.getElementsByClassName("demop");
+            let captionTextp = document.getElementById("captionp");
+            if (n > slidesp.length) { slideIndexp = 1 }
+            if (n < 1) { slideIndexp = slidesp.length }
+            for (i = 0; i < slidesp.length; i++) {
+                slidesp[i].style.display = "none";
+            }
+            for (i = 0; i < dotsp.length; i++) {
+                dotsp[i].className = dotsp[i].className.replace(" activep", "");
+            }
+            slidesp[slideIndexp - 1].style.display = "block";
+            dotsp[slideIndexp - 1].className += " activep";
+            captionTextp.innerHTML = dotsp[slideIndexp - 1].alt;
+        }
+    </script>
+
+
+    <div id="myModal" class="image_inlarge">
+        <span class="image_cross">×</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal
+        var myImg = document.getElementById('myImg');
+        var modalImg = document.getElementById('img01');
+        myImg.onclick = function () {
+            modal.style.display = "flex";
+            modalImg.src = myImg.src;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName('image_cross')[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+
+
+
+    <!-- Footer -->
+    <footer style="background: #f4f0f0c7;">
+        <div class="footer__quick__links">
+            <span class="general__links">
+                <ul>
+                    <li>GENERAL</li>
+                    <li><a href="/about" class="reset__a">About</a></li>
+                    <li><a href="/blog" class="reset__a">Blog</a></li>
+                    <li><a href="/products" class="reset__a">Products</a></li>
+                    <li><a href="/contact" class="reset__a">Contact</a></li>
+                </ul>
+            </span>
+            <span class="legal__links">
+                <ul>
+                    <li>LEGAL</li>
+                    <li><a href="/shipping-policy" class="reset__a">Shipping Details</a></li>
+                    <li><a href="/terms-and-conditions" class="reset__a">Terms & Conditions</a></li>
+                    <li><a href="/privacy-policy" class="reset__a">Privacy Policy</a></li>
+                    <li><a href="/terms-and-conditions" class="reset__a">Refund Policy</a></li>
+                </ul>
+            </span>
+            <span class="products__links">
+                <ul>
+                    <li>PRODUCTS</li>
+                    <li><a href="https://make-tronics.com/wp-content/uploads/2024/02/Maketronics-Line-Card.pdf"
+                            class="reset__a">Line Card</a></li>
+                    <li><a href="https://make-tronics.com/wp-content/uploads/2024/02/Maketronics-Catalog.pdf"
+                            class="reset__a">Product Catalogue</a></li>
+                    <li><a href="/manufacturers" class="reset__a">Manufacturers</a></li>
+                    <li><a href="/case-study" class="reset__a">Case Study</a></li>
+                </ul>
+            </span>
+            <span class="social__links">
+                <ul>
+                    <li>SOCIAL MEDIA</li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/kristonics-pvt-ltd/about/" class="reset__a"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <div class="footer__credits">
+            <p>Copyright &copy; 2024 MakeTronics | All Rights Reserved</p>
+        </div>
+    </footer>
+    </div>
+    <div class="footer-bottom-wa-btn">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=919319080598&text=Hi%20there,%20Maketronics!%20I%20am%20looking%20for%20part%20#%20with%20target%20price%20of%20$"
+            class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+    </div>
+
+
+
+
+    <div id="cookiePopup">
+        <h4>Cookie Consent</h4>
+        <p>Our website uses cookies to provide your browsing experience and relevant information. Before continuing to
+            use our website, you agree & accept our <a href="/privacy-policy">Cookie Policy & Privacy</a>.</p>
+        <button id="acceptCookie">Accept</button>
+    </div>
+    <script>
+        function onClick(e) {
+            e.preventDefault();
+            grecaptcha.enterprise.ready(async () => {
+                const token = await grecaptcha.enterprise.execute('6LcyHN4pAAAAAJH26SjrF7XxV_MGtFt18oq35hGh', { action: 'LOGIN' });
+            });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabLinks = document.querySelectorAll(".tab-link");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabLinks.forEach(function (tabLink) {
+                tabLink.addEventListener("click", function () {
+                    const tabId = this.getAttribute("data-tab");
+
+                    tabLinks.forEach(function (link) {
+                        link.classList.remove("active");
+                    });
+                    tabContents.forEach(function (content) {
+                        content.classList.remove("active");
+                    });
+
+                    this.classList.add("active");
+                    document.getElementById(tabId).classList.add("active");
+                });
+            });
+        });
+
+    </script>
+
+    <script>
+        var cookieName = "userStatus";
+        var cookieValue = "Maketronics";
+        var cookieExpireDays = 30;
+
+        // Function to create a cookie
+        function createCookie(cookieName, cookieValue, cookieExpireDays) {
+            var currentDate = new Date();
+            currentDate.setTime(currentDate.getTime() + (cookieExpireDays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + currentDate.toGMTString();
+            document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+        }
+
+        // Function to check if the cookie exists
+        function checkCookie() {
+            var decodedCookie = decodeURIComponent(document.cookie);
+            return decodedCookie.includes(cookieName);
+        }
+
+        // Check the cookie when the page loads
+        window.onload = function () {
+            if (checkCookie()) {
+                document.getElementById("cookiePopup").style.display = "none";
+            } else {
+                document.getElementById("cookiePopup").style.display = "block";
+            }
+        };
+
+        // Event listener for accepting the cookie
+        document.getElementById("acceptCookie").onclick = function () {
+            createCookie(cookieName, cookieValue, cookieExpireDays);
+            document.getElementById("cookiePopup").style.display = "none";
+        };
+    </script>
+
+
+
+
+
+    <script
+        src="https://make-tronics.com/wp-content/themes/maketronics/assets/js/infinite-slider.js?ver=85927"></script>
+    <script src="https://make-tronics.com/wp-content/themes/maketronics/assets/js/slider.js?ver=813186"></script>
+    <script src="https://make-tronics.com/wp-content/themes/maketronics/assets/js/script.js?ver=859596"></script>
+
+
+    <script>
+        document.addEventListener('wpcf7mailsent', function (event) {
+
+            location = '/thank-you';
+
+        }, false);
+
+    </script>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var couponCodeFields = document.getElementsByClassName("couponcode");
+            for (var i = 0; i < couponCodeFields.length; i++) {
+                couponCodeFields[i].value = "FIRST15";
+                couponCodeFields[i].style.backgroundColor = '#eee';
+                couponCodeFields[i].disabled = true;
+            }
+        });
+        jQuery(document).ready(function ($) {
+            $('.team-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
