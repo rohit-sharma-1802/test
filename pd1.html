@@ -190,6 +190,11 @@
 
         }
 
+        [name="submit"]{
+            font-size: 1rem !important;
+            font-weight: 600;
+        }
+
         .mytabs {
             display: flex;
             flex-wrap: wrap;
@@ -206,6 +211,7 @@
             font-weight: bold;
             text-align: center;
             width: 20%;
+            font-size: 14px;
         }
 
         .mytabs label:hover {
@@ -257,9 +263,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
+            font-size: 16px;
             gap: 5px;
-            background: #0d39f7de;
+            background: #004aad;
             ;
             color: #fff;
             border: 1px solid #000;
@@ -270,7 +276,7 @@
 
         .product__details__table .quote__box__form {
             border-radius: 5px;
-            border: 1px solid #004aad;
+            border: 2px solid #004aad;
         }
 
         .original-price{
@@ -300,26 +306,34 @@
     padding: 2px 8px;
     background: red;
     border-radius: 5px;
+    font-size: 16px;
 }
 .unit-price .original-price  span{
     color: #fff !important;
 }
 
 .box__heading .main_product_title_availability{
-    color: #fff !important;
+    color: #fff !important; 
+}
+
+.quote_box .box__heading{
+    padding: 0px;
+    padding-bottom: 15px;
 }
 
 .availability_title{
     color: #000;
     padding-inline: 15px;
-    font-size: 11px;
+    font-size: 15px;
+    font-weight: 600;
 }
 .availability_status{
     color: #fff;
-    background: #00bc31dd;
+    background: #08d33eef;
     padding: 3px 10px;
     border-radius: 15px;
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: 600;
     margin-block: 4px;
 }
 
@@ -454,10 +468,10 @@
                     <div class="column__1">
                         <div class="product__details__table">
 
-                            <div class="quote_box ">
+                            <div class="quote_box">
 
                                 <div class="box__heading" id="request-your-quote">
-                                    <!-- <p>Request Quote</p> -->
+                                    <p>Request Quote</p>
                                 </div>
                                 <div class="quote__box__form">
                                     <div id="quoteForm" action="" method="post">
@@ -501,16 +515,16 @@
                                                                     name="company" /></span>
                                                         </p>
                                                     </div>
-                                                </div>
-                                                <div class="block-e">
-                                                    <p><label for="email">Email</label><span
-                                                            class="wpcf7-form-control-wrap" data-name="email"><input
-                                                                size="40" maxlength="80"
-                                                                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                                aria-required="true" aria-invalid="false"
-                                                                placeholder="Email" value="" type="email"
-                                                                name="email" /></span>
-                                                    </p>
+                                                    <div class="block-e">
+                                                        <p><label for="email">Email</label><span
+                                                                class="wpcf7-form-control-wrap" data-name="email"><input
+                                                                    size="40" maxlength="80"
+                                                                    class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                                                    aria-required="true" aria-invalid="false"
+                                                                    placeholder="Email" value="" type="email"
+                                                                    name="email" /></span>
+                                                        </p>
+                                                    </div>
                                                 </div>
                                                 <div class="inlineInput">
                                                     <div class="block-e">
