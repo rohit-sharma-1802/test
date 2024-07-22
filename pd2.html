@@ -200,11 +200,14 @@
         }
 
         .mytabs label {
-            padding: 10px;
-            background: #e2e2e2;
-            font-weight: bold;
-            padding-inline: 37px;
-        }
+    padding: 10px;
+    background: #e2e2e2;
+    font-weight: bold;
+    /* padding-inline: 37px; */
+    width: 25%;
+    text-align: center;
+    font-size: 14px;
+}
 
         .mytabs label:hover {
             cursor: pointer;
@@ -252,15 +255,12 @@
         }
 
         .datasheet {
-            font-size: 11px;
+            font-size: 16px;
+            font-weight: 600;
             gap: 5px;
-            background: #0d39f7de;
-            color: #fff;
-            border: 1px solid #000;
-            border-radius: 7px;
-            width: 46%;
+            /* background: #0d39f7de; */
+            color: #004aad;
             margin: auto;
-            padding: 2px 8px;
         }
 
         .product__details__table .quote__box__form {
@@ -303,21 +303,62 @@
 .box__heading .main_product_title_availability{
     color: #fff !important;
 }
-
-.availability_title{
-    color: #000;
-    padding-inline: 15px;
-    font-size: 11px;
+.productTitleMain{
+    font-size: 20px;
+    font-weight: 600;
 }
-.availability_status{
+
+.descriptionMain, .availablityMainTitle{
+    padding-top: 15px;
+}
+
+
+.descriptionMain h4, .availablityMainTitle h4{
+    font-size: 14px;
+    font-weight: bold;
+    color: #004aad;
+}
+
+.datasheetLinkMain{
+    padding-block: 15px;
+}
+
+
+.availablityMainTitle p{
+    background: #08911c;
+    width: fit-content;
+    font-size: 17px;
     color: #fff;
-    background: #00bc31dd;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 10px;
-    margin-block: 4px;
+    padding-inline: 13px;
+    border-radius: 28px;
 }
 
+.showcaseIcons{
+    padding-block: 10px;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+   padding-inline-end: 20px;
+    gap: 10px;
+}
+
+.iconsDetails {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+   
+}
+
+.iconsDetails .fa{
+    font-size: 16px;
+    color: #004aad;
+}
+
+.productTechnicalDetails{
+    width: 88vw;
+    margin: auto;
+    padding-block: 20px;
+}
         @media screen and (max-width: 900px) {
 
             .all__details__container,
@@ -388,14 +429,6 @@
 
 
             <div class="product__details__box">
-                <div class="main_title_header">
-                    <div class="box__heading main_product_title">
-                        <p id="partNo">1824 &#8211; Adafruit Industries LLC</p>
-                    </div>
-                    <div class="box__heading main_product_title_availability">
-                        <span class="availability_title">Availability: </span><span class="availability_status">In Stock</span>
-                    </div>
-                </div>
 
                 <div class="product__details">
                     <div class="column__2">
@@ -443,37 +476,43 @@
                     </div>
                     <div class="column__1">
                         <div class="product__details__table">
+                            <div class="productTitleMain">1824 &#8211; Adafruit Industries LLC</div>
+                            <div class="availablityMainTitle">
+                                <h4>Availability</h4>
+                                <p>In stock</p>
+                            </div>
+                            
+                
+                            <div class="descriptionMain">
+                                <h4>Description</h4>
+                                <p>SWITCH KEYPAD 12KEY NON-ILLUM</p>
+                            </div>
 
-                            <table>
-                                <tr>
-                                    <th>Manufacturer</th>
-                                    <td>
-                                        Adafruit Industries LLC </td>
-                                </tr>
-            
-                                <tr>
-                                    <th>Manufacturer Part No.</th>
-                                    <td>1824 &#8211; Adafruit Industries LLC</td>
-                                </tr>
-                                <tr>
-                                    <th>Description</th>
-                                    <td>SWITCH KEYPAD 12KEY NON-ILLUM</td>
-                                </tr>
-                                <tr>
-                                    <th>Detailed Description</th>
-                                    <td>Keypad Switch 12 Polymer Keys Conductive Rubber Contacts Matrix Output
-                                        Non-Illuminated</td>
-                                </tr>
-                                <tr>
-                                    <td>Datasheet</td>
-                                    <td>
-                                        <a class="datasheet" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2216/1824_Web.pdf">
-                                            <i class="fa fa-file-pdf-o"></i>
-                                            <span>Datasheet</span>
-                                        </a>
-                                   </td>
-                                </tr>
-                            </table>
+                           
+                            <div class="datasheetLinkMain">
+                                <a class="datasheet" href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2216/1824_Web.pdf">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Datasheet</span>
+                                </a>
+                            </div>
+                            <hr />
+
+                            <div class="showcaseIcons">
+                                <div class="iconsDetails">
+                                    <i class="fa fa-leaf"></i>
+                                    <span>RoHS Compliant</span>
+                                </div>
+
+                                <div class="iconsDetails">
+                                    <i class="fa fa-cube"></i>
+                                    <span>TUBE Packaging</span>
+                                </div>
+
+                                <div class="iconsDetails">
+                                    <i class="fa fa-check-circle"></i>
+                                   <span> Certificate of Compliance Guarantee</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -510,200 +549,6 @@
                 </div>
 
 
-            </div>
-            <div class="mytabs">
-                <input type="radio" id="productAttributes" name="mytabs" checked="checked">
-                <label for="productAttributes">Product Attributes</label>
-                <div class="tab">
-                    <div class="additional__info__box">
-                        <div class="box__heading">
-                            <p>Product Attributes</p>
-                        </div>
-                        <div class="product__attributes">
-                            <div class="product__details__table">
-                                <table width="519">
-                                    <tbody>
-                                        <tr>
-                                            <td width="231"><strong>Product Attribute</strong></td>
-                                            <td width="289"><strong>Attribute Value</strong></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Manufacturer:</strong></td>
-                                            <td width="289">Adafruit</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Product Category:</strong></td>
-                                            <td width="289">Input Devices</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Product:</strong></td>
-                                            <td width="289">Electromechanicals</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Brand:</strong></td>
-                                            <td width="289">Adafruit</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Product Type:</strong></td>
-                                            <td width="289">Input Devices</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Factory Pack Quantity:</strong></td>
-                                            <td width="289">1</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Subcategory:</strong></td>
-                                            <td width="289">Input Devices</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="231"><strong>Unit Weight:</strong></td>
-                                            <td width="289">0.811301 oz</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p>&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="product_info_btn">
-                            <button class="error_product_report_btn">
-                                <a href="/product-rectification-query/">Report Product Information Error </a>
-                            </button>
-                            <!-- 			   <button class="view_similar_product_btn">
-                               <a href="">View Similar Products</a>
-                          </button> -->
-                        </div>
-                    </div>
-                </div>
-
-                <input type="radio" id="productInformation" name="mytabs">
-                <label for="productInformation">Product Information</label>
-                <div class="tab">
-                    <div class="additional__info__box">
-                        <div class="box__heading">
-                            <p>Product Information</p>
-                        </div>
-                        <div class="additional__info">
-                            <p>
-                            <div>
-                                <h1>Semiconductor Product Description</h1>
-                                <p>
-                                    Our semiconductor product, model number 1824, is a cutting-edge component that
-                                    offers
-                                    unparalleled performance and reliability for a wide range of applications. Whether
-                                    you
-                                    are a
-                                    seasoned engineer or a casual user, this product is designed to meet your needs with
-                                    its
-                                    advanced features and benefits.
-                                </p>
-                                <h2>Key Features:</h2>
-                                <ul>
-                                    <li>High-speed processing capabilities</li>
-                                    <li>Low power consumption</li>
-                                    <li>Wide operating temperature range</li>
-                                    <li>Compact size for easy integration</li>
-                                    <li>Robust design for long-term durability</li>
-                                </ul>
-                                <h2>Key Benefits:</h2>
-                                <ul>
-                                    <li>Improved efficiency and performance in electronic devices</li>
-                                    <li>Extended battery life for portable devices</li>
-                                    <li>Reliable operation in harsh environments</li>
-                                    <li>Cost-effective solution for semiconductor needs</li>
-                                </ul>
-                                <h2>Applications:</h2>
-                                <p>
-                                    The 1824 semiconductor product is ideal for a variety of applications, including but
-                                    not
-                                    limited to:
-                                <ul>
-                                    <li>Consumer electronics</li>
-                                    <li>Automotive systems</li>
-                                    <li>Industrial automation</li>
-                                    <li>Telecommunications</li>
-                                </ul>
-                                </p>
-                                <h2>Performance Advantages:</h2>
-                                <p>
-                                    Compared to other semiconductor products on the market, the 1824 stands out with its
-                                    superior performance in terms of speed, efficiency, and reliability. Its innovative
-                                    design
-                                    and advanced technology make it a top choice for professionals and enthusiasts
-                                    alike.
-                                </p>
-                                <p>
-                                    In conclusion, our semiconductor product 1824 is a game-changer in the industry,
-                                    offering
-                                    unmatched features, benefits, and performance advantages. Whether you are looking
-                                    for a
-                                    high-quality component for your project or simply want to upgrade your electronic
-                                    devices,
-                                    this product is sure to exceed your expectations.
-                                </p>
-                            </div>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="radio" id="additionalInformation" name="mytabs">
-                <label for="additionalInformation">Additional Information</label>
-                <div class="tab">
-                    <div class="additional__info__box">
-                        <div class="box__heading">
-                            <p>Additional Info</p>
-                        </div>
-                        <div class="additional__info">
-                            <table>
-                                <tr>
-                                    <td>Attribute</td>
-                                    <td>Description</td>
-                                </tr>
-                                <tr>
-                                    <td>Moisture Sensitivity Level (MSL)</td>
-                                    <td>Not Applicable</td>
-                                </tr>
-                                <tr>
-                                    <td>ECCN</td>
-                                    <td>EAR99</td>
-                                </tr>
-                                <tr>
-                                    <td>HTSUS</td>
-                                    <td>8537.10.9170</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <input type="radio" id="relatedProducts" name="mytabs">
-                <label for="relatedProducts">Related products</label>
-                <div class="tab">
-                    <div class="additional__info__box">
-                        <div class="box__heading">
-                            <p>Related Products</p>
-                        </div>
-                        <div class="additional__info">
-                            <table>
-                                <tr>
-                                    <td>Part No</td>
-                                    <td>Price</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem, ipsum dolor.</td>
-                                    <td>$ 10.4</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem, ipsum dolor.</td>
-                                    <td>$ 10.4</td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem, ipsum dolor.</td>
-                                    <td>$ 10.4</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -822,119 +667,207 @@
                         </div>
                     </div>
                 </div>  
-                <div id="hiddenElement">
-
-                    <div class="quote__box">
-                        <div class="box__heading">
-                            <p>Request Quote</p>
-                        </div>
-                        <div class="quote__box__form quote__box__form_hidden" style="background: #fff;">
-                            <div id="quoteForm" action="" method="post">
-
-                                <div class="wpcf7 no-js" id="wpcf7-f11710-o2" lang="en-US" dir="ltr">
-                                    <div class="screen-reader-response">
-                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                        <ul></ul>
-                                    </div>
-                                    <form action="/product/23992021/1824/#wpcf7-f11710-o2" method="post"
-                                        class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
-                                        data-status="init">
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="11710" />
-                                            <input type="hidden" name="_wpcf7_version" value="5.9.6" />
-                                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11710-o2" />
-                                            <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                            <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                                        </div>
-                                        <div class="company_email_col">
-                                            <div class="block-e">
-                                                <p><label for="your-name">Name</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="your-name"><input
-                                                            size="40" maxlength="80"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false" placeholder="Name"
-                                                            value="" type="text" name="your-name" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="block-e">
-                                                <p><label for="company">Company</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="company"><input
-                                                            size="40" maxlength="80"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Company name" value="" type="text"
-                                                            name="company" /></span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="block-e">
-                                            <p><label for="email">Email</label><span class="wpcf7-form-control-wrap"
-                                                    data-name="email"><input size="40" maxlength="80"
-                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                        aria-required="true" aria-invalid="false" placeholder="Email"
-                                                        value="" type="email" name="email" /></span>
-                                            </p>
-                                        </div>
-                                        <div class="inlineInput">
-                                            <div class="block-e">
-                                                <p><label for="part_number">Part #</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="part_number"><input
-                                                            size="40" maxlength="80"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required partNumberHidden"
-                                                            aria-required="true" aria-invalid="false" value=""
-                                                            type="text" name="part_number" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="block-e">
-                                                <p><label for="quantity">Qty</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="quantity"><input
-                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number"
-                                                            min="0" aria-required="true" aria-invalid="false"
-                                                            placeholder="0" value="" type="number"
-                                                            name="quantity" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="block-e">
-                                                <p><label for="target_price">Target</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="target_price"><input
-                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
-                                                            min="0" aria-invalid="false" placeholder="0" value=""
-                                                            type="number" name="target_price" /></span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="block-e">
-                                            <p><label for="couponcode">Coupon</label><br />
-                                                <span class="wpcf7-form-control-wrap" data-name="couponcode"><input
-                                                        size="40" maxlength="80"
-                                                        class="wpcf7-form-control wpcf7-text couponcode"
-                                                        aria-invalid="false" value="FIRST15" type="text"
-                                                        name="couponcode" /></span>
-                                            </p>
-                                        </div>
-                                        <p><button type="submit" name="submit">Send Now</button>
-                                        </p>
-                                        <p style="display: none !important;" class="akismet-fields-container"
-                                            data-prefix="_wpcf7_ak_"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea"
-                                                    cols="45" rows="8" maxlength="100"></textarea></label><input
-                                                type="hidden" id="ak_js_2" name="_wpcf7_ak_js" value="166" />
-                                            <script>document.getElementById("ak_js_2").setAttribute("value", (new Date()).getTime());</script>
-                                        </p>
-                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
 
         </div>
     </div>
+    <div class="productTechnicalDetails">
+        <div class="mytabs">
+            <input type="radio" id="productAttributes" name="mytabs" checked="checked">
+            <label for="productAttributes">Product Attributes</label>
+            <div class="tab">
+                <div class="additional__info__box">
+                    <div class="box__heading">
+                        <p>Product Attributes</p>
+                    </div>
+                    <div class="product__attributes">
+                        <div class="product__details__table">
+                            <table width="519">
+                                <tbody>
+                                    <tr>
+                                        <td width="231"><strong>Product Attribute</strong></td>
+                                        <td width="289"><strong>Attribute Value</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Manufacturer:</strong></td>
+                                        <td width="289">Adafruit</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Product Category:</strong></td>
+                                        <td width="289">Input Devices</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Product:</strong></td>
+                                        <td width="289">Electromechanicals</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Brand:</strong></td>
+                                        <td width="289">Adafruit</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Product Type:</strong></td>
+                                        <td width="289">Input Devices</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Factory Pack Quantity:</strong></td>
+                                        <td width="289">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Subcategory:</strong></td>
+                                        <td width="289">Input Devices</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="231"><strong>Unit Weight:</strong></td>
+                                        <td width="289">0.811301 oz</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="product_info_btn">
+                        <button class="error_product_report_btn">
+                            <a href="/product-rectification-query/">Report Product Information Error </a>
+                        </button>
+                        <!-- 			   <button class="view_similar_product_btn">
+                           <a href="">View Similar Products</a>
+                      </button> -->
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" id="productInformation" name="mytabs">
+            <label for="productInformation">Product Information</label>
+            <div class="tab">
+                <div class="additional__info__box">
+                    <div class="box__heading">
+                        <p>Product Information</p>
+                    </div>
+                    <div class="additional__info">
+                        <p>
+                        <div>
+                            <h1>Semiconductor Product Description</h1>
+                            <p>
+                                Our semiconductor product, model number 1824, is a cutting-edge component that
+                                offers
+                                unparalleled performance and reliability for a wide range of applications. Whether
+                                you
+                                are a
+                                seasoned engineer or a casual user, this product is designed to meet your needs with
+                                its
+                                advanced features and benefits.
+                            </p>
+                            <h2>Key Features:</h2>
+                            <ul>
+                                <li>High-speed processing capabilities</li>
+                                <li>Low power consumption</li>
+                                <li>Wide operating temperature range</li>
+                                <li>Compact size for easy integration</li>
+                                <li>Robust design for long-term durability</li>
+                            </ul>
+                            <h2>Key Benefits:</h2>
+                            <ul>
+                                <li>Improved efficiency and performance in electronic devices</li>
+                                <li>Extended battery life for portable devices</li>
+                                <li>Reliable operation in harsh environments</li>
+                                <li>Cost-effective solution for semiconductor needs</li>
+                            </ul>
+                            <h2>Applications:</h2>
+                            <p>
+                                The 1824 semiconductor product is ideal for a variety of applications, including but
+                                not
+                                limited to:
+                            <ul>
+                                <li>Consumer electronics</li>
+                                <li>Automotive systems</li>
+                                <li>Industrial automation</li>
+                                <li>Telecommunications</li>
+                            </ul>
+                            </p>
+                            <h2>Performance Advantages:</h2>
+                            <p>
+                                Compared to other semiconductor products on the market, the 1824 stands out with its
+                                superior performance in terms of speed, efficiency, and reliability. Its innovative
+                                design
+                                and advanced technology make it a top choice for professionals and enthusiasts
+                                alike.
+                            </p>
+                            <p>
+                                In conclusion, our semiconductor product 1824 is a game-changer in the industry,
+                                offering
+                                unmatched features, benefits, and performance advantages. Whether you are looking
+                                for a
+                                high-quality component for your project or simply want to upgrade your electronic
+                                devices,
+                                this product is sure to exceed your expectations.
+                            </p>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" id="additionalInformation" name="mytabs">
+            <label for="additionalInformation">Additional Information</label>
+            <div class="tab">
+                <div class="additional__info__box">
+                    <div class="box__heading">
+                        <p>Additional Info</p>
+                    </div>
+                    <div class="additional__info">
+                        <table>
+                            <tr>
+                                <td>Attribute</td>
+                                <td>Description</td>
+                            </tr>
+                            <tr>
+                                <td>Moisture Sensitivity Level (MSL)</td>
+                                <td>Not Applicable</td>
+                            </tr>
+                            <tr>
+                                <td>ECCN</td>
+                                <td>EAR99</td>
+                            </tr>
+                            <tr>
+                                <td>HTSUS</td>
+                                <td>8537.10.9170</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <input type="radio" id="relatedProducts" name="mytabs">
+            <label for="relatedProducts">Related products</label>
+            <div class="tab">
+                <div class="additional__info__box">
+                    <div class="box__heading">
+                        <p>Related Products</p>
+                    </div>
+                    <div class="additional__info">
+                        <table>
+                            <tr>
+                                <td>Part No</td>
+                                <td>Price</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem, ipsum dolor.</td>
+                                <td>$ 10.4</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem, ipsum dolor.</td>
+                                <td>$ 10.4</td>
+                            </tr>
+                            <tr>
+                                <td>Lorem, ipsum dolor.</td>
+                                <td>$ 10.4</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script>
         window.onload = function () {
             // Function to check and close missing </td>, </tr>, or </table> tags
@@ -1025,28 +958,6 @@
                 }
             });
         }
-    </script>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var hiddenElement = document.getElementById('hiddenElement');
-            var scrollPosition = window.scrollY || window.pageYOffset;
-
-            var scrollPercentage = (scrollPosition / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-            if (scrollPercentage > 64 && scrollPercentage < 95) {
-                hiddenElement.style.display = 'block';
-                //    updatePartNumber1(); // Call the function to update the part number
-                var partNo = document.getElementById('partNo').textContent;
-                var partNoHidden = document.querySelectorAll('.partNumberHidden');
-                partNoHidden[1].setAttribute("value", partNo);
-                partNoHidden[0].setAttribute("value", partNo);
-            }
-            else {
-                hiddenElement.style.display = 'none';
-            }
-
-        });
     </script>
 
     <script>
