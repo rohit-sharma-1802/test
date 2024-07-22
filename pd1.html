@@ -203,7 +203,8 @@
             padding: 10px;
             background: #e2e2e2;
             font-weight: bold;
-            padding-inline: 37px;
+            text-align: center;
+            width: 20%;
         }
 
         .mytabs label:hover {
@@ -245,7 +246,7 @@
         }
 
         .containerp .mySlidesp img {
-            width: 70% !important;
+            width: 50% !important;
             margin: auto;
             padding-left: 0px;
             cursor: pointer;
@@ -605,6 +606,51 @@
 
             </div>
             <div class="mytabs">
+                <input type="radio" id="productDetails" name="mytabs" checked="checked">
+                <label for="productDetails">Product Details</label>
+                <div class="tab">
+                    <div class="additional__info__box">
+                        <div class="box__heading">
+                            <p>Product Details</p>
+                        </div>
+                        <div class="product__attributes">
+                            <div class="product__details__table">
+                                <table>
+                                    <tr>
+                                        <th>Manufacturer</th>
+                                        <td>
+                                            Adafruit Industries LLC </td>
+                                    </tr>
+                
+                                    <tr>
+                                        <th>Manufacturer Part No.</th>
+                                        <td>1824 &#8211; Adafruit Industries LLC</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>SWITCH KEYPAD 12KEY NON-ILLUM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Detailed Description</th>
+                                        <td>Keypad Switch 12 Polymer Keys Conductive Rubber Contacts Matrix Output
+                                            Non-Illuminated</td>
+                                    </tr>
+                                </table>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="product_info_btn">
+                            <button class="error_product_report_btn">
+                                <a href="/product-rectification-query/">Report Product Information Error </a>
+                            </button>
+                            <!-- 			   <button class="view_similar_product_btn">
+                               <a href="">View Similar Products</a>
+                          </button> -->
+                        </div>
+                    </div>
+                </div>
+
+
                 <input type="radio" id="productAttributes" name="mytabs" checked="checked">
                 <label for="productAttributes">Product Attributes</label>
                 <div class="tab">
@@ -617,40 +663,40 @@
                                 <table width="519">
                                     <tbody>
                                         <tr>
-                                            <td width="231"><strong>Product Attribute</strong></td>
-                                            <td width="289"><strong>Attribute Value</strong></td>
+                                            <td ><strong>Product Attribute</strong></td>
+                                            <td ><strong>Attribute Value</strong></td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Manufacturer:</strong></td>
-                                            <td width="289">Adafruit</td>
+                                            <td ><strong>Manufacturer:</strong></td>
+                                            <td >Adafruit</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Product Category:</strong></td>
-                                            <td width="289">Input Devices</td>
+                                            <td ><strong>Product Category:</strong></td>
+                                            <td >Input Devices</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Product:</strong></td>
-                                            <td width="289">Electromechanicals</td>
+                                            <td ><strong>Product:</strong></td>
+                                            <td >Electromechanicals</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Brand:</strong></td>
-                                            <td width="289">Adafruit</td>
+                                            <td ><strong>Brand:</strong></td>
+                                            <td >Adafruit</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Product Type:</strong></td>
-                                            <td width="289">Input Devices</td>
+                                            <td ><strong>Product Type:</strong></td>
+                                            <td >Input Devices</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Factory Pack Quantity:</strong></td>
-                                            <td width="289">1</td>
+                                            <td ><strong>Factory Pack Quantity:</strong></td>
+                                            <td >1</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Subcategory:</strong></td>
-                                            <td width="289">Input Devices</td>
+                                            <td ><strong>Subcategory:</strong></td>
+                                            <td >Input Devices</td>
                                         </tr>
                                         <tr>
-                                            <td width="231"><strong>Unit Weight:</strong></td>
-                                            <td width="289">0.811301 oz</td>
+                                            <td ><strong>Unit Weight:</strong></td>
+                                            <td >0.811301 oz</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -800,144 +846,12 @@
             </div>
         </div>
 
-        <div class="column__2">
-            <div class="price__table">
+            <!-- <div class="price__table">
                 <div class="box__heading">
                     <p>Product Details</p>
-                </div>
-                <table>
-                    <tr>
-                        <th>Manufacturer</th>
-                        <td>
-                            Adafruit Industries LLC </td>
-                    </tr>
-
-                    <tr>
-                        <th>Manufacturer Part No.</th>
-                        <td>1824 &#8211; Adafruit Industries LLC</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td>SWITCH KEYPAD 12KEY NON-ILLUM</td>
-                    </tr>
-                    <tr>
-                        <th>Detailed Description</th>
-                        <td>Keypad Switch 12 Polymer Keys Conductive Rubber Contacts Matrix Output
-                            Non-Illuminated</td>
-                    </tr>
-                </table>
-                <div id="hiddenElement">
-
-                    <div class="quote__box">
-                        <div class="box__heading">
-                            <p>Request Quote</p>
-                        </div>
-                        <div class="quote__box__form quote__box__form_hidden" style="background: #fff;">
-                            <div id="quoteForm" action="" method="post">
-
-                                <div class="wpcf7 no-js" id="wpcf7-f11710-o2" lang="en-US" dir="ltr">
-                                    <div class="screen-reader-response">
-                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                        <ul></ul>
-                                    </div>
-                                    <form action="/product/23992021/1824/#wpcf7-f11710-o2" method="post"
-                                        class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
-                                        data-status="init">
-                                        <div style="display: none;">
-                                            <input type="hidden" name="_wpcf7" value="11710" />
-                                            <input type="hidden" name="_wpcf7_version" value="5.9.6" />
-                                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f11710-o2" />
-                                            <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                            <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
-                                        </div>
-                                        <div class="company_email_col">
-                                            <div class="block-e">
-                                                <p><label for="your-name">Name</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="your-name"><input
-                                                            size="40" maxlength="80"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false" placeholder="Name"
-                                                            value="" type="text" name="your-name" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="block-e">
-                                                <p><label for="company">Company</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="company"><input
-                                                            size="40" maxlength="80"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                            aria-required="true" aria-invalid="false"
-                                                            placeholder="Company name" value="" type="text"
-                                                            name="company" /></span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="block-e">
-                                            <p><label for="email">Email</label><span class="wpcf7-form-control-wrap"
-                                                    data-name="email"><input size="40" maxlength="80"
-                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                        aria-required="true" aria-invalid="false" placeholder="Email"
-                                                        value="" type="email" name="email" /></span>
-                                            </p>
-                                        </div>
-                                        <div class="inlineInput">
-                                            <div class="block-e">
-                                                <p><label for="part_number">Part #</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="part_number"><input
-                                                            size="40" maxlength="80"
-                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required partNumberHidden"
-                                                            aria-required="true" aria-invalid="false" value=""
-                                                            type="text" name="part_number" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="block-e">
-                                                <p><label for="quantity">Qty</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="quantity"><input
-                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number"
-                                                            min="0" aria-required="true" aria-invalid="false"
-                                                            placeholder="0" value="" type="number"
-                                                            name="quantity" /></span>
-                                                </p>
-                                            </div>
-                                            <div class="block-e">
-                                                <p><label for="target_price">Target</label><span
-                                                        class="wpcf7-form-control-wrap" data-name="target_price"><input
-                                                            class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number"
-                                                            min="0" aria-invalid="false" placeholder="0" value=""
-                                                            type="number" name="target_price" /></span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="block-e">
-                                            <p><label for="couponcode">Coupon</label><br />
-                                                <span class="wpcf7-form-control-wrap" data-name="couponcode"><input
-                                                        size="40" maxlength="80"
-                                                        class="wpcf7-form-control wpcf7-text couponcode"
-                                                        aria-invalid="false" value="FIRST15" type="text"
-                                                        name="couponcode" /></span>
-                                            </p>
-                                        </div>
-                                        <p><button type="submit" name="submit">Send Now</button>
-                                        </p>
-                                        <p style="display: none !important;" class="akismet-fields-container"
-                                            data-prefix="_wpcf7_ak_"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea"
-                                                    cols="45" rows="8" maxlength="100"></textarea></label><input
-                                                type="hidden" id="ak_js_2" name="_wpcf7_ak_js" value="166" />
-                                            <script>document.getElementById("ak_js_2").setAttribute("value", (new Date()).getTime());</script>
-                                        </p>
-                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                -->
 
 
-                </div>
-            </div>
-
-        </div>
     </div>
     <script>
         window.onload = function () {
@@ -1030,29 +944,6 @@
             });
         }
     </script>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            var hiddenElement = document.getElementById('hiddenElement');
-            var scrollPosition = window.scrollY || window.pageYOffset;
-
-            var scrollPercentage = (scrollPosition / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-            if (scrollPercentage > 64 && scrollPercentage < 95) {
-                hiddenElement.style.display = 'block';
-                //    updatePartNumber1(); // Call the function to update the part number
-                var partNo = document.getElementById('partNo').textContent;
-                var partNoHidden = document.querySelectorAll('.partNumberHidden');
-                partNoHidden[1].setAttribute("value", partNo);
-                partNoHidden[0].setAttribute("value", partNo);
-            }
-            else {
-                hiddenElement.style.display = 'none';
-            }
-
-        });
-    </script>
-
     <script>
         jQuery(document).ready(function ($) {
             $('.slick-slider').slick({
